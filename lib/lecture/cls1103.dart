@@ -1,7 +1,17 @@
+import 'dart:math';
+
 void main() {
   introduceOnself();
   email(title: '제목', address: 'aaa@aaa.com', text: 'test');
   email(address: 'aaa@aaa.com', text: 'test');
+  print(calcTriangleArea(10, 5));
+  print(calcCircleArea(5));
+}
+
+double calcCircleArea(double radius) {
+  //return 3.14 * radius * radius;
+  //return 3.14 * pow(radius, 2);
+  return pi * pow(radius, 2);
 }
 
 double calcTriangleArea(double bottom, double height) {
