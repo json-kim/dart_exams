@@ -22,16 +22,10 @@ double calcTriangleArea(double bottom, double height) {
   return result;
 }
 
-void email({String title, String address, String text}) {
-  String titleResult = title;
-
-  if (titleResult == null) {
-    titleResult = '제목 없음';
-  }
-
+void email({String title = '제목 없음', String address, String text}) {
   print('''
 $address 에 아래의 메일을 송신한다.
-제목 : $titleResult
+제목 : $title
 본문 : $text
   ''');
 }
