@@ -21,7 +21,6 @@ class Cleric {
 
   int pray(int sec) {
     int curMp = mp;
-    Random random = Random();
     mp = min(sec + Random().nextInt(3) + mp, maxMp);
 
     // 실제로 회복된 mp 양 리턴
