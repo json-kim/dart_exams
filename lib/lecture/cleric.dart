@@ -1,17 +1,13 @@
-import 'dart:math';
-
 class Cleric {
   String name;
   int hp;
   int mp;
 
-  final int maxHp = 50;
-  final int maxMp = 10;
+  int maxHp = 50;
+  int maxMp = 10;
 
-  Cleric({this.name, hp, mp}) {
-    this.hp = min(maxHp, hp);
-    this.mp = min(maxMp, mp);
-  }
+  Cleric({this.name, this.hp, this.mp});
+
 }
 
 void main() {
