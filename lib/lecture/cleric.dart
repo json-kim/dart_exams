@@ -8,6 +8,22 @@ class Cleric {
 
   Cleric({this.name, this.hp, this.mp});
 
+  void selfAid() {
+    if (mp < 5) {
+      return;
+    }
+
+    mp -= 5;
+    hp = maxHp;
+  }
+
+  String status() {
+    return '''
+  name: $name
+  hp: $hp
+  mp: $mp
+  ''';
+  }
 }
 
 void main() {
@@ -15,17 +31,16 @@ void main() {
   Cleric cleric2 = Cleric(name: '중수', hp: 30, mp: 5);
   Cleric cleric3 = Cleric(name: '고수', hp: 50, mp: 10);
 
-  print('''
-  name: ${cleric1.name}
-  hp: ${cleric1.hp}
-  mp: ${cleric1.mp}''');
-  print('''
-  name: ${cleric2.name}
-  hp: ${cleric2.hp}
-  mp: ${cleric2.mp}''');
-  print('''
-  name: ${cleric3.name}
-  hp: ${cleric3.hp}
-  mp: ${cleric3.mp}''');
+  print(cleric1.status());
+
+  cleric1.selfAid();
+
+  print(cleric1.status());
+
+  print(cleric2.status());
+
+  cleric2.selfAid();
+
+  print(cleric2.status());
 
 }
