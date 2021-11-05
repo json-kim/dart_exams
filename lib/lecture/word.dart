@@ -7,6 +7,12 @@ void main() {
   print(word.isVowel(3)); // false
   print(word.isVowel(4)); // true
 
+  print(word.isConsonant(0));
+  print(word.isConsonant(1));
+  print(word.isConsonant(2));
+  print(word.isConsonant(3));
+  print(word.isConsonant(4));
+
 }
 
 class Word {
@@ -14,7 +20,7 @@ class Word {
 
   Word(this.letters);
 
-  static const vowel = ['a', 'e', 'i', 'o', 'u'];
+  static const vowel = 'aeiou';
 
   // i번째 글자가 모음이면 true // a, i, u, e, o
   bool isVowel(int i) {
@@ -23,6 +29,6 @@ class Word {
 
   // i번째 글자가 자음이면 true
   bool isConsonant(int i) {
-    return false;
+    return !isVowel(i);
   }
 }
