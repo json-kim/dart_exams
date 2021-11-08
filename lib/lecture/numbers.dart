@@ -22,11 +22,23 @@ class Numbers {
 
   int maxNumber() {
     // 최대 값 리턴
-    return numbers.reduce((maxNum, e) => max(maxNum, e));
+    int maxNum = numbers[0];
+
+    for (int n in numbers) {
+      maxNum = max(maxNum, n);
+    }
+
+    return maxNum;
   }
 
   int minNumber() {
     // 최소 값 리턴
-    return numbers.reduce((minNum, e) => min(minNum, e));
+    int minNum = numbers[0];
+
+    for (int n in numbers) {
+      minNum = min(minNum, n);
+    }
+
+    return minNum;
   }
 }
