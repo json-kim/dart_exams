@@ -5,7 +5,7 @@ void main() {
   Alphabet alphabet = Alphabet();
 
   for (int i = 0; i < 10; i++) {
-    String alpha = Alphabet.alphabet[random.nextInt(27)];
+    String alpha = Alphabet.alphabet[random.nextInt(26)];
     print('$alpha : ${alphabet.getIndexOfAlphabet(alpha)}');
   }
 }
