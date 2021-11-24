@@ -9,7 +9,7 @@ void main() {
   if (pepero.getNumOfPepero() >= 11) {
     print('OK');
   } else {
-    print(pepero.peperoBundle);
+    print(11 - pepero.peperoBundle.length);
   }
 }
 
